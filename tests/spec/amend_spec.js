@@ -82,4 +82,15 @@ describe("Amend", function() {
 	    expect(Amend.delete("Foobar", "bar")).toEqual("Foo");
 	});
     });
+
+    describe(".eachChar", function() {
+	it("provides an iterator function", function() {
+	    var i = 0;
+	    var testString = "Foo";
+	    Amend.eachChar(testString, function(c) {
+		expect(c).toEqual(testString.charAt(i));
+		i++;
+	    });
+	});
+    });
 });

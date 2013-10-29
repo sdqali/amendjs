@@ -21,5 +21,8 @@ Amend = {
     },
     delete: function(str, pattern) {
 	return str.replace(new RegExp(pattern.concat(".*")), "");
+    },
+    eachChar: function(str, f) {
+	str.split("").forEach(f);
     }
 }
