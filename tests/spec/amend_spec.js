@@ -99,4 +99,28 @@ describe("Amend", function() {
 	    expect(Amend.reverse("Foo Bar")).toEqual("raB ooF");
 	});
     });
+
+    describe("attaching methods to String#prototype", function() {
+	Amend.addToPrototype();
+
+	it("capitalises", function() {
+	    expect("foo bar is bar".capitalize()).toEqual("Foo bar is bar");
+	});
+
+	it("compares ignoring case", function() {
+	    expect("FoO bAR".equalIgnoreCase("FOO bar")).toBe(true);
+	});
+
+	it("titlizes", function() {
+	    expect("foo bar".titlize()).toEqual("Foo Bar");
+	});
+
+	it("chop", function() {
+	    expect("foo b".chop()).toEqual("foo ");
+	});
+
+	it("clear", function() {
+	    expect("foo b".clear()).toEqual("");
+	});
+    });
 });

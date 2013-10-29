@@ -27,5 +27,26 @@ Amend = {
     },
     reverse: function(str) {
 	return str.split("").reverse().join("");
+    },
+    addToPrototype: function() {
+	String.prototype.capitalize = function() {
+	    return Amend.capitalize(this);
+	};
+
+	String.prototype.equalIgnoreCase = function(otherString) {
+	    return Amend.equalIgnoreCase(this, otherString);
+	};
+
+	String.prototype.titlize = function() {
+	    return Amend.titlize(this);
+	};
+
+	String.prototype.chop = function() {
+	    return Amend.chop(this);
+	};
+
+	String.prototype.clear = function() {
+	    return Amend.clear(this);
+	};
     }
 }
