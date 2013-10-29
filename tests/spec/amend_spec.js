@@ -30,4 +30,18 @@ describe("ImageFitter", function() {
 	    expect(Amend.equalIgnoreCase("foo bAr iS %#@ B-a*r", "FOO BaR IS %#@ B-A*r")).toBe(true);
 	});
     });
+
+    describe(".titlize", function() {
+	it("will capitalise all words", function() {
+	    expect(Amend.titlize("foo bar is bar")).toEqual("Foo Bar Is Bar");
+	});
+
+	it("can handle single word", function() {
+	    expect(Amend.titlize("foo ")).toEqual("Foo ");
+	});
+
+	it("can handle single character", function() {
+	    expect(Amend.titlize("f")).toEqual("F");
+	});
+    });
 });
