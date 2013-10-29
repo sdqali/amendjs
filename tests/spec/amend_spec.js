@@ -93,4 +93,10 @@ describe("Amend", function() {
 	    });
 	});
     });
+
+    describe(".reverse", function() {
+	it("should reverse string", function() {
+	    expect(Amend.reverse("Foo Bar")).toEqual("raB ooF");
+	});
+    });
 });

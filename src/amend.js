@@ -24,5 +24,8 @@ Amend = {
     },
     eachChar: function(str, f) {
 	str.split("").forEach(f);
+    },
+    reverse: function(str) {
+	return str.split("").reverse().join("");
     }
 }
