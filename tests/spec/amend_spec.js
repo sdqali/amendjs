@@ -1,4 +1,4 @@
-describe("ImageFitter", function() {
+describe("Amend", function() {
     describe(".capitalize", function() {
 	it("capitalises string with single word", function() {
 	    expect(Amend.capitalize("foo")).toEqual("Foo");
