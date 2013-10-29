@@ -72,4 +72,14 @@ describe("Amend", function() {
 	    expect(Amend.clear("Foo")).toEqual("");
 	});
     });
+
+    describe(".delete", function() {
+	it("can remove single character", function() {
+	    expect(Amend.delete("Foo", "o")).toEqual("F");
+	});
+
+	it("can remove multiple characters", function() {
+	    expect(Amend.delete("Foobar", "bar")).toEqual("Foo");
+	});
+    });
 });

@@ -18,5 +18,8 @@ Amend = {
     },
     clear: function(str) {
 	return "";
+    },
+    delete: function(str, pattern) {
+	return str.replace(new RegExp(pattern.concat(".*")), "");
     }
 }
