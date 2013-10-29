@@ -4,6 +4,10 @@ describe("ImageFitter", function() {
 	    expect(Amend.capitalize("foo")).toEqual("Foo");
 	});
 
+	it("can handle empty string", function() {
+	    expect(Amend.capitalize("")).toEqual("");
+	});
+
 	it("capitalises string with single character", function() {
 	    expect(Amend.capitalize("f")).toEqual("F");
 	});
@@ -42,6 +46,24 @@ describe("ImageFitter", function() {
 
 	it("can handle single character", function() {
 	    expect(Amend.titlize("f")).toEqual("F");
+	});
+
+	it("can handle empty string", function() {
+	    expect(Amend.titlize("")).toEqual("");
+	});
+    });
+
+    describe(".chop", function() {
+	it("removes last character from string", function() {
+	    expect(Amend.chop("foo")).toEqual("fo");
+	});
+
+    	it("handles strings with single character", function() {
+	    expect(Amend.chop("f")).toEqual("");
+	});
+
+    	it("handles empty string", function() {
+	    expect(Amend.chop("")).toEqual("");
 	});
     });
 });
