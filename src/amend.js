@@ -15,5 +15,8 @@ Amend = {
     },
     chop: function(str) {
 	return str.substr(0, str.length - 1);
+    },
+    clear: function(str) {
+	return "";
     }
 }

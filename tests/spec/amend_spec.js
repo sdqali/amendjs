@@ -66,4 +66,10 @@ describe("ImageFitter", function() {
 	    expect(Amend.chop("")).toEqual("");
 	});
     });
+
+    describe(".clear", function() {
+	it("sets the string's value to empty string", function() {
+	    expect(Amend.clear("Foo")).toEqual("");
+	});
+    });
 });
